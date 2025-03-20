@@ -1,0 +1,196 @@
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color Variables */
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+/* Global Styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply text-white antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    background: linear-gradient(135deg, #4a0072 0%, #1a0036 100%);
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Typography */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tighter;
+    font-family: 'SF Pro Display', sans-serif;
+  }
+}
+
+/* Animations */
+@layer base {
+  .animate-fade-in {
+    @apply opacity-0;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+/* Fonts */
+@layer base {
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2') format('woff2');
+    font-weight: 6
+  }
+}
+
+/* Components */
+@layer components {
+  /* Section Styles */
+  .section-container {
+    @apply container max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-28;
+  }
+  
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold tracking-tight mb-6 text-center;
+  }
+  
+  .section-subheading {
+    @apply text-xl text-muted-foreground mb-12 text-center max-w-3xl mx-auto;
+  }
+
+  /* Button Styles */
+  .button-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium transition-all duration-200 hover:bg-primary/90 hover:scale-[1.03] active:scale-[0.97] focus:outline-none focus:ring-2 focus:ring-primary/70 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  .button-secondary {
+    @apply inline-flex items-center justify-center rounded-full bg-secondary text-secondary-foreground px-6 py-3 text-sm font-medium transition-all duration-200 hover:bg-secondary/80 hover:scale-[1.03] active:scale-[0.97] focus:outline-none focus:ring-2 focus:ring-secondary/70 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  .button-ghost {
+    @apply inline-flex items-center justify-center rounded-full bg-transparent text-primary px-6 py-3 text-sm font-medium transition-all duration-200 hover:bg-secondary hover:scale-[1.03] active:scale-[0.97] focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-0 after:bg-foreground after:transition-all hover:after:w-full;
+  }
+  
+  .nav-link-active {
+    @apply text-foreground after:w-full;
+  }
+
+  /* Card Styles */
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg;
+  }
+
+  /* Image Styles */
+  .image-container {
+    @apply relative overflow-hidden rounded-2xl shadow-lg;
+  }
+
+  .image-container img {
+    @apply w-full h-full object-cover transition-transform duration-700 hover:scale-105;
+  }
+
+  /* Gradient Styles */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-primary/70;
+  }
+
+  .dark-purple-gradient {
+    background: linear-gradient(135deg, #4a0072 0%, #1a0036 100%);
+  }
+}

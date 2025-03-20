@@ -34,6 +34,8 @@ const CaseStudiesSection = () => {
         <SectionHeading 
           title="Реальные кейсы"
           subtitle="Примеры успешных проектов автоматизации бизнеса с помощью искусственного интеллекта"
+          className="text-black"
+          subtitleClassName="text-white"
         />
         
         <div className="space-y-20 mt-16">

@@ -52,8 +52,8 @@ const WorkflowStep: React.FC<WorkflowStepProps> = ({
       <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
         <Icon className="w-8 h-8 text-primary" />
       </div>
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
+      <h3 className="text-xl font-semibold mb-3 text-black">{title}</h3>
+      <p className="text-white">{description}</p>
     </div>
   );
 };

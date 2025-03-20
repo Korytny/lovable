@@ -54,8 +54,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           />
         </div>
       </div>
-      <h3 className="text-lg font-semibold">{name}</h3>
-      <p className="text-muted-foreground">{role}</p>
+      <h3 className="text-lg font-semibold text-black">{name}</h3>
+      <p className="text-white">{role}</p>
     </div>
   );
 };

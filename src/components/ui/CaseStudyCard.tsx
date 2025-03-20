@@ -53,9 +53,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
     >
       <div className={`grid md:grid-cols-2 gap-8 md:gap-12 items-center ${reverse ? 'md:grid-flow-col md:auto-cols-fr' : ''}`}>
         <div className={reverse ? 'md:order-2' : ''}>
-          <p className="text-sm font-medium px-3 py-1 bg-secondary rounded-full inline-block mb-4">{subtitle}</p>
-          <h3 className="text-2xl font-bold mb-3">{title}</h3>
-          <p className="text-muted-foreground mb-6">{description}</p>
+          <p className="text-sm font-medium px-3 py-1 bg-black text-white rounded-full inline-block mb-4">{subtitle}</p>
+          <h3 className="text-2xl font-bold mb-3 text-black">{title}</h3>
+          <p className="text-white mb-6">{description}</p>
           <a href="#contact" className="inline-flex items-center text-sm font-medium text-primary hover:underline transition-all group">
             Подробнее 
             <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />

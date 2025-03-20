@@ -11,13 +11,15 @@ const ContactSection = () => {
         <SectionHeading 
           title="Контакты"
           subtitle="Свяжитесь с нами, чтобы обсудить ваш проект"
+          className="text-black"
+          subtitleClassName="text-white"
         />
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="glass-card p-8 shadow-md animate-fade-in-left">
-              <h3 className="text-2xl font-bold mb-6">Наши контакты</h3>
+              <h3 className="text-2xl font-bold mb-6 text-black">Наши контакты</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -28,7 +30,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-muted-foreground mb-1">Email</h4>
-                    <a href="mailto:info@aibusiness.com" className="text-lg font-medium hover:underline">info@aibusiness.com</a>
+                    <a href="mailto:info@aibusiness.com" className="text-lg font-medium hover:underline text-white">info@aibusiness.com</a>
                   </div>
                 </div>
                 
@@ -40,7 +42,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-muted-foreground mb-1">Телефон</h4>
-                    <a href="tel:+71234567890" className="text-lg font-medium hover:underline">+7 (123) 456-78-90</a>
+                    <a href="tel:+71234567890" className="text-lg font-medium hover:underline text-white">+7 (123) 456-78-90</a>
                   </div>
                 </div>
                 
@@ -52,7 +54,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-muted-foreground mb-1">Адрес</h4>
-                    <p className="text-lg font-medium">г. Москва, ул. Примерная, д. 123</p>
+                    <p className="text-lg font-medium text-white">г. Москва, ул. Примерная, д. 123</p>
                   </div>
                 </div>
                 
@@ -64,7 +66,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-muted-foreground mb-1">Часы работы</h4>
-                    <p className="text-lg font-medium">Пн-Пт: 9:00 - 18:00</p>
+                    <p className="text-lg font-medium text-white">Пн-Пт: 9:00 - 18:00</p>
                   </div>
                 </div>
               </div>

@@ -35,6 +35,8 @@ const WorkflowSection = () => {
           title="Как мы работаем"
           subtitle="Прозрачный процесс разработки от идеи до готового продукта"
           gradient
+          className="text-white"
+          subtitleClassName="text-gray-400"
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">

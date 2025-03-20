@@ -72,7 +72,7 @@ const Navbar = () => {
           href="#hero" 
           className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity"
         >
-          <span className="text-gradient hover:opacity-90 transition-opacity">AI Business</span>
+          <span className="text-white hover:opacity-90 transition-opacity">Product Mind</span>
         </a>
 
         {/* Desktop Navigation */}

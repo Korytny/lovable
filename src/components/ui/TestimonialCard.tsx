@@ -54,7 +54,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       <Quote className="w-10 h-10 text-primary/30 mb-4" />
-      <p className="text-lg mb-6 italic">{quote}</p>
+      <p className="text-lg mb-6 italic text-black">{quote}</p>
       
       <div className="flex items-center">
         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
